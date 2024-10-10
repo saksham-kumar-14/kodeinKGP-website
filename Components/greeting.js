@@ -8,6 +8,12 @@ export default function Greeting(){
     
     const now = new Date();
     const hours = now.getHours();
+    let greeting = "Evening";
+    if (5 <= hours && hours < 12) {
+        greeting = "Morning";
+    }else if(12<= hours && hours < 17 ) {
+        greeting = "Afternoon";
+    }
 
     function submit(){
         if (inputField != "" && inputField != ""){
@@ -18,30 +24,28 @@ export default function Greeting(){
 
     useEffect(()=>{
         const temp = localStorage.getItem("name");
-        console.log(temp);
         if(temp != "" && temp!=" " && temp!=null){
             setName(temp);
         }
     },[])
 
     return(
-        <div>
+        <div className="flex align-center justify-center text-[25px] ">
 
             {
                 name ? 
                     <div>
-                        { (5 <= hours && hours < 12) &&
-                            <span>Good Morning, {name}</span>
-                        }
-                        {12<= hours && hours < 17 &&
-                            <span>Good Afternoon, {name}</span>
-                        }
-                        { (17<= hours && hours < 24 || 0<= hours && hours < 5)  && 
-                            <span>Good Evening, {name}</span>
-                        }
-                    </div> : 
+                        <span>Good {greeting}, </span> <span onClick={()=>{
+                            setInputField(null);
+                            setName(null);
+                        }} className="cursor-pointer font-semibold text-[30px] bg-gradient-to-r from-[#11e3fb] to-[#5be6ff] text-transparent bg-clip-text">{name}</span>
+                    </div>
+                    : 
                     <form onSubmit={submit}>
-                        Enter your name <input placeholder="Name" onChange={(e)=>{
+                        <span>Enter your name,</span>
+                        <input 
+                        className="font-semibold caret-white outline-none bg-inherit border-solid border-b-2 border-[#11e3fb] ml-5 mr-5 text-[30px] bg-gradient-to-r from-[#11e3fb] to-[#5be6ff] text-transparent bg-clip-text"
+                        onChange={(e)=>{
                             setInputField(e.target.value)
                         }} />
                     </form>

@@ -7,30 +7,74 @@ export default function Body(){
 
     return(
         <div>
-            <div>
+            <div className="grid grid-cols-2 p-16">
                 <div>
-                    <h1>Articles</h1>
-                    <p>Your Gateway to AI, Web Dev, and Blockchain</p>
-                    <p>Explore cutting-edge trends and insights shaping the future of technology.</p>
+                    <h1 className="font-semibold text-[100px] bg-gradient-to-r from-[#fff] to-[#5be6ff] text-transparent bg-clip-text">Articles</h1>
+                    <p className="text-3xl mt-5 mb-5">Your Gateway to AI, Web Dev, and Blockchain</p>
+                    <p className="text-xl">Explore cutting-edge trends and insights shaping the future of technology.</p>
                 </div>
-                <Image
-                src={ProgrammerImg}
-                alt="Image"
-                width={300}
-                height={300}
-                />
+                <div>
+                    <Image
+                    src={ProgrammerImg}
+                    alt="Image"
+                    width={0}
+                    height={0}
+                    />
+                </div>
+                
             </div>
+        
+            {allArticles.length>0 && 
 
-            <div>
-                {allArticles.map((e, idx)=>{
-                    return(
-                        <a key={idx} target="_blank" href={e.link}>
-                            <span>{e.title}</span>
-                            <span>{e.date}</span>
-                        </a>
-                    )
-                })}
+            <div className="flex h-[75vh] align-middle">
+
+                <div className="w-[30%] flex flex-col items-center justify-center ">
+                    <div className="h-[100%] flex flex-col bg-[rgb(20,20,50)] cursor-pointer border-2 border-[rgb(20,20,50)] rounded-3xl  hover:border-[#5be6ff] m-5 align-middle p-2">
+                        <Image
+                            className="rounded-t-2xl w-[100%]"
+                            src={allArticles[0].img}
+                            width={250}
+                            height={250}
+                        />
+                        <span
+                        className="m-5 font-semibold text-xl bg-gradient-to-r from-[#5be6ff] to-[#fff] text-transparent bg-clip-text"
+                        >{allArticles[0].date}</span>
+                        <span className="m-5 text-3xl">{allArticles[0].title}</span>
+                    </div>
+                </div>
+                
+                <div className="w-[70%] overflow-y-scroll">
+                    {allArticles.map((e, idx)=>{
+                        if(idx!=0){
+                            return(
+                                <div className="flex justify-center align-middle">
+                                    <a
+                                    className="bg-[rgb(20,20,50)] border-2 border-[rgb(20,20,50)] rounded-3xl  hover:border-[#5be6ff] flex m-5 p-1"
+                                    key={idx} target="_blank" href={e.link}>
+                                        <Image
+                                        className="rounded-l-2xl"
+                                        src={e.img}
+                                        width={150}
+                                        height={200}
+                                        />
+                                        <div className="flex flex-col align-middle justify-center p-3">
+                                            <span
+                                            className="font-semibold text-xl bg-gradient-to-r from-[#5be6ff] to-[#fff] text-transparent bg-clip-text"
+                                            >{e.date}</span>
+                                            <span
+                                            className="text-2xl"
+                                            >{e.title}</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            )
+                        }
+                    })}
+                </div>
+            
             </div>
+                
+            }
 
         </div>
     )

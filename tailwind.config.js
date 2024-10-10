@@ -10,7 +10,17 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'wheat': 'rgb(245, 222, 179)'
       },
+      keyframes: {
+        
+      }
+    },
+
+    screens: {
+      'sm' : '640px',
+      'md' : '768px',
+      'lg' : '1024px'
     },
   },
   plugins: [],
