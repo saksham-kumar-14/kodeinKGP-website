@@ -1,8 +1,7 @@
-import "./globals.css";
-
+import "../globals.css";
 
 export const metadata = {
-  title: "KodeinKGP",
+  title: "Kodein",
   description: "frontend design",
 };
 
