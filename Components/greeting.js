@@ -35,16 +35,16 @@ export default function Greeting(){
             {
                 name ? 
                     <div>
-                        <span>Good {greeting}, </span> <span onClick={()=>{
+                        <span className="text-lg md:text-[25px] lg:text-[30px]">Good {greeting}, </span> <span onClick={()=>{
                             setInputField(null);
                             setName(null);
-                        }} className="cursor-pointer font-semibold text-[30px] bg-gradient-to-r from-[#11e3fb] to-[#5be6ff] text-transparent bg-clip-text">{name}</span>
+                        }} className="cursor-pointer font-semibold text-lg md:text-[25px] lg:text-[30px] bg-gradient-to-r from-[#11e3fb] to-[#5be6ff] text-transparent bg-clip-text">{name}</span>
                     </div>
                     : 
                     <form onSubmit={submit}>
-                        <span>Enter your name,</span>
+                        <span className="text-lg md:text-[25px] lg:text-[30px]">Enter your name,</span>
                         <input 
-                        className="font-semibold caret-white outline-none bg-inherit border-solid border-b-2 border-[#11e3fb] ml-5 mr-5 text-[30px] bg-gradient-to-r from-[#11e3fb] to-[#5be6ff] text-transparent bg-clip-text"
+                        className="font-semibold caret-white outline-none bg-inherit border-solid border-b-2 border-[#11e3fb] ml-5 mr-5 text-lg md:text-[25px] lg:text-[30px] bg-gradient-to-r from-[#11e3fb] to-[#5be6ff] text-transparent bg-clip-text"
                         onChange={(e)=>{
                             setInputField(e.target.value)
                         }} />

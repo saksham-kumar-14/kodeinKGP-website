@@ -7,11 +7,11 @@ export default function Body(){
 
     return(
         <div>
-            <div className="grid grid-cols-2 p-16">
-                <div>
-                    <h1 className="font-semibold text-[100px] bg-gradient-to-r from-[#fff] to-[#5be6ff] text-transparent bg-clip-text">Articles</h1>
-                    <p className="text-3xl mt-5 mb-5">Your Gateway to AI, Web Dev, and Blockchain</p>
-                    <p className="text-xl">Explore cutting-edge trends and insights shaping the future of technology.</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 p-16">
+                <div className="flex justify-center items-center flex-col">
+                    <h1 className="font-semibold sm:text-[50px] md:text-[75px] lg:text-[100px] bg-gradient-to-r from-[#fff] to-[#5be6ff] text-transparent bg-clip-text">Articles</h1>
+                    <p className="text-lg md:text-xl lg:text-3xl mt-5 mb-5">Your Gateway to AI, Web Dev, and Blockchain</p>
+                    <p className="text-sm md:text-lg lg:text-xl">Explore cutting-edge trends and insights shaping the future of technology.</p>
                 </div>
                 <div>
                     <Image
@@ -26,10 +26,10 @@ export default function Body(){
         
             {allArticles.length>0 && 
 
-            <div className="flex h-[75vh] align-middle">
+            <div className="flex flex-col lg:flex-row h-[75vh] align-middle">
 
-                <div className="w-[30%] flex flex-col items-center justify-center ">
-                    <div className="h-[100%] flex flex-col bg-[rgb(20,20,50)] cursor-pointer border-2 border-[rgb(20,20,50)] rounded-3xl  hover:border-[#5be6ff] m-5 align-middle p-2">
+                <div className="lg:w-[30%] flex flex-col items-center justify-center ">
+                    <div className="lg:h-[100%] flex flex-col bg-[rgb(20,20,50)] cursor-pointer border-2 border-[rgb(20,20,50)] rounded-3xl  hover:border-[#5be6ff] m-5 align-middle p-2">
                         <Image
                             className="rounded-t-2xl w-[100%]"
                             src={allArticles[0].img}
@@ -43,7 +43,7 @@ export default function Body(){
                     </div>
                 </div>
                 
-                <div className="w-[70%] overflow-y-scroll">
+                <div className="lg:w-[70%] overflow-y-scroll lg:border-none border-2 border-[#5be6ff] p-4 rounded-2xl">
                     {allArticles.map((e, idx)=>{
                         if(idx!=0){
                             return(

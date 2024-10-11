@@ -7,9 +7,9 @@ import resources from "@/api/footer/resources"
 export default function Footer(){
 
     return(
-        <div className="border-t-[1px] border-gray-600 p-16 grid grid-cols-3">
+        <div className="border-t-[1px] border-gray-600 lg:p-16 md:p-8 sm:p-4 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:text-2xl md:text-lg sm:text-sm">
 
-            <div className="flex flex-col text-[20px]">
+            <div className="flex flex-col mt-4 mb-4">
                 <Image
                 className=""
                 src={KodeinLogo}
@@ -42,7 +42,7 @@ export default function Footer(){
 
             {resources.map((e, k)=>{
                 return (
-                    <div key={k} className="text-xl flex flex-col p-6">
+                    <div key={k} className="flex flex-col p-6">
                         <span className="font-semibold">{e.tech}</span>
                         <div className="flex flex-col">
                             {e.resources.map((src, idx)=>{
