@@ -31,7 +31,7 @@ export default function Body(){
                                     width={300}
                                     height={300}
                                 />
-                                <div className="flex text-xl text-[rgb(1,1,27)] hover:text-white hover:duration-[2.5s]">
+                                <div className="flex text-xl text-white md:text-[rgb(1,1,27)] lg:text-[rgb(1,1,27)] hover:text-white hover:duration-[2.5s]">
                                     <a className="m-1" target="_blank" href="http://facebook.com"><FaFacebook/></a>
                                     <a className="m-1" target="_blank" href="http://gmail.com"><FaMailBulk/></a>
                                     <a className="m-1" target="_blank" href="http://instagram.com"><FaInstagram/></a>
@@ -60,7 +60,7 @@ export default function Body(){
                                     width={300}
                                     height={300}
                                 />
-                                <div className="text-xl flex text-[rgb(1,1,27)] hover:text-white hover:duration-[2.5s]">
+                                <div className="text-xl flex text-white md:text-[rgb(1,1,27)] lg:text-[rgb(1,1,27)] hover:text-white hover:duration-[2.5s]">
                                     <a className="m-1" target="_blank" href="http://facebook.com"><FaFacebook/></a>
                                     <a className="m-1" target="_blank" href="http://gmail.com"><FaMailBulk/></a>
                                     <a className="m-1" target="_blank" href="http://instagram.com"><FaInstagram/></a>
@@ -87,7 +87,7 @@ export default function Body(){
                                     width={300}
                                     height={300}
                                 />
-                                <div className="text-xl flex text-[rgb(1,1,27)] hover:text-white hover:duration-[2.5s]">
+                                <div className="text-xl flex text-white md:text-[rgb(1,1,27)] lg:text-[rgb(1,1,27)] hover:text-white hover:duration-[2.5s]">
                                     <a className="m-1" target="_blank" href="http://facebook.com"><FaFacebook/></a>
                                     <a className="m-1" target="_blank" href="http://gmail.com"><FaMailBulk/></a>
                                     <a className="m-1" target="_blank" href="http://instagram.com"><FaInstagram/></a>
@@ -132,7 +132,7 @@ export default function Body(){
                                     width={300}
                                     height={300}
                                 />
-                                <div className="text-xl flex text-[rgb(1,1,27)] hover:text-white hover:duration-[2.5s]">
+                                <div className="text-xl flex text-white md:text-[rgb(1,1,27)] lg:text-[rgb(1,1,27)] hover:text-white hover:duration-[2.5s]">
                                     <a className="m-1" target="_blank" href="http://facebook.com"><FaFacebook/></a>
                                     <a className="m-1" target="_blank" href="http://gmail.com"><FaMailBulk/></a>
                                     <a className="m-1" target="_blank" href="http://instagram.com"><FaInstagram/></a>

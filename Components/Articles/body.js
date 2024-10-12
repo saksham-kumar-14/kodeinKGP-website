@@ -29,7 +29,7 @@ export default function Body(){
             <div className="flex flex-col lg:flex-row h-[75vh] align-middle">
 
                 <div className="lg:w-[30%] flex flex-col items-center justify-center ">
-                    <div className="lg:h-[100%] flex flex-col bg-[rgb(20,20,50)] cursor-pointer border-2 border-[rgb(20,20,50)] rounded-3xl  hover:border-[#5be6ff] m-5 align-middle p-2">
+                    <a href={allArticles[0].link} target="_blank" className="lg:h-[100%] flex flex-col bg-[rgb(20,20,50)] cursor-pointer border-2 border-[rgb(20,20,50)] rounded-3xl  hover:border-[#5be6ff] m-5 align-middle p-2">
                         <Image
                             className="rounded-t-2xl w-[100%]"
                             src={allArticles[0].img}
@@ -40,7 +40,7 @@ export default function Body(){
                         className="m-5 font-semibold text-xl bg-gradient-to-r from-[#5be6ff] to-[#fff] text-transparent bg-clip-text"
                         >{allArticles[0].date}</span>
                         <span className="m-5 text-3xl">{allArticles[0].title}</span>
-                    </div>
+                    </a>
                 </div>
                 
                 <div className="lg:w-[70%] overflow-y-scroll lg:border-none border-2 border-[#5be6ff] p-4 rounded-2xl">
@@ -49,20 +49,20 @@ export default function Body(){
                             return(
                                 <div className="flex justify-center align-middle">
                                     <a
-                                    className="bg-[rgb(20,20,50)] border-2 border-[rgb(20,20,50)] rounded-3xl  hover:border-[#5be6ff] flex m-5 p-1"
+                                    className="bg-[rgb(20,20,50)] border-2 border-[rgb(20,20,50)] rounded-3xl  hover:border-[#5be6ff] flex m-2 lg:m-5 p-1"
                                     key={idx} target="_blank" href={e.link}>
                                         <Image
-                                        className="rounded-l-2xl"
+                                        className="rounded-l-2xl object-cover"
                                         src={e.img}
                                         width={150}
                                         height={200}
                                         />
                                         <div className="flex flex-col align-middle justify-center p-3">
                                             <span
-                                            className="font-semibold text-xl bg-gradient-to-r from-[#5be6ff] to-[#fff] text-transparent bg-clip-text"
+                                            className="sm:text-lg md:text-xl lg:text-2xl font-semibold text-xl bg-gradient-to-r from-[#5be6ff] to-[#fff] text-transparent bg-clip-text"
                                             >{e.date}</span>
                                             <span
-                                            className="text-2xl"
+                                            className="sm:text-lg md:text-xl lg:text-2xl"
                                             >{e.title}</span>
                                         </div>
                                     </a>
