@@ -54,14 +54,14 @@ export default function Sudoku(){
     return(
         <div className="flex flex-col items-center justify-center">
 
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="flex flex-col justify-center items-center p-4">
                     {sudoku.map((a, i)=>{
                         return(
                             <div className="flex flex-row justify-center align-middle">
                                 {sudoku[i].map((b, j)=>{
                                     return(
-                                        <div className="w-[20px] h-[20px] text-[20px] m-4">
+                                        <div className="w-[15px] h-[15px] text-[15px] md:w-[20px] md:h-[20px] md:text-[20px] lg:w-[20px] lg:h-[20px] lg:text-[20px] m-4">
                                             {sudoku[i][j] == 0 ? 
                                             <input 
                                             onChange={(e)=>{
@@ -78,29 +78,32 @@ export default function Sudoku(){
                     })}
                 </div>
 
-                <div className="flex flex-col justify-center items-center">
-                    <button
-                    onClick={()=>{
-                        setShowReset(true)
-                        if(checkWin()) {
-                            alert("Solved!")
-                        }else{
-                            alert("Try again!")
-                        }
-                    }}
-                    className="bg-[rgb(1,1,27)] mb-2 border-white border-2 rounded-2xl pr-6 pl-6 pt-2 pb-2 text-white text-lg hover:bg-white hover:text-[rgb(1,1,27)] hover:duration-500"
-                    >Submit</button>
-                
+                <div className="grid grid-cols-2">
+                    <div className='flex justify-center items-center'>
+                        <button
+                        onClick={()=>{
+                            setShowReset(true)
+                            if(checkWin()) {
+                                alert("Solved!")
+                            }else{
+                                alert("Try again!")
+                            }
+                        }}
+                        className="bg-[rgb(1,1,27)] mt-1 mb-1 border-white border-2 rounded-2xl pr-6 pl-6 pt-2 pb-2 text-white text-lg hover:bg-white hover:text-[rgb(1,1,27)] hover:duration-500"
+                        >Submit</button>
+                    </div>
 
-                    {showReset &&
-                    <button 
-                    className="bg-[rgb(1,1,27)] mt-2 border-white border-2 rounded-2xl pr-6 pl-6 pt-2 pb-2 text-white text-lg hover:bg-white hover:text-[rgb(1,1,27)] hover:duration-500"
-                    onClick={()=>{
-                        setShowReset(false);
-                        setSudoku(grid);
-                    }}>
-                        Reset   
-                    </button>}
+                    <div className='flex justify-center items-center'>
+                        {showReset &&
+                        <button 
+                        className="bg-[rgb(1,1,27)] mt-1 mb-1 border-white border-2 rounded-2xl pr-6 pl-6 pt-2 pb-2 text-white text-lg hover:bg-white hover:text-[rgb(1,1,27)] hover:duration-500"
+                        onClick={()=>{
+                            setShowReset(false);
+                            setSudoku(grid);
+                        }}>
+                            Reset   
+                        </button>}
+                    </div>
 
                 </div>
 
