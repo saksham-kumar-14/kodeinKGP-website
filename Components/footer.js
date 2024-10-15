@@ -42,7 +42,7 @@ export default function Footer(){
 
             {resources.map((e, k)=>{
                 return (
-                    <div key={k} className="flex flex-col p-6">
+                    <div key={k} className="flex flex-col p-2 md:p-4 lg:p-6">
                         <span className="font-semibold">{e.tech}</span>
                         <div className="flex flex-col">
                             {e.resources.map((src, idx)=>{
