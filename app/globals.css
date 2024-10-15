@@ -44,15 +44,8 @@ input[type=number] {
 }
 
 :root {
-  --background: #ededed;
-  --foreground: rgba(1,1,27,.6)
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: rgba(1,1,27,1);
-    --foreground: #ededed;
-  }
+  --background: rgba(1,1,27,1);
+  --foreground: #ededed;
 }
 
 body {
