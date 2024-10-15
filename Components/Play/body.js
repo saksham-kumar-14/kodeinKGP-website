@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function Body(){
 
-    const [game, setGame] = useState();
+    const [game, setGame] = useState('sudoku');
 
     return(
         <div>
