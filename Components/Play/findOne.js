@@ -69,7 +69,7 @@ export default function FindOne(){
                         className={
                             !isPresent(idx) ?
                             "w-[9vh] h-[9vh] md:w-[16vw] md:h-[12vw] lg:w-[10vw] lg:h-[8vw] m-2 lg:m-4 bg-[#5be6ff] hover:bg-[#174851] cursor-pointer border-2 rounded-lg border-[#5be6ff] hover:border-black text-white text-2xl flex align-middle justify-center items-center":
-                            "w-[9vh] h-[9vh] md:w-[16vw] md:h-[12vw] m-2 lg:m-4 bg-[#174851] cursor-pointer border-2 rounded-lg border-black text-black flex align-middle justify-center items-center text-2xl"
+                            "w-[9vh] h-[9vh] md:w-[16vw] md:h-[12vw] lg:w-[10vw] lg:h-[8vw] m-2 lg:m-4 bg-[#174851] cursor-pointer border-2 rounded-lg border-black text-black flex align-middle justify-center items-center text-2xl"
                         }
                         onClick={()=>{
                             if(!isPresent(idx) && chance!=0){
