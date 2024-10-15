@@ -33,7 +33,7 @@ export default function Desc(){
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
-                    <div className="flex flex-col justify-center align-middle resize bg-[rgb(20,20,50)] p-5 rounded-xl m-5 h-[40vh] hover:duration-500 hover:bg-[rgb(30,30,50)] delay-200">
+                    <div className="flex flex-col justify-center align-middle resize bg-[rgb(20,20,50)] p-5 rounded-xl m-5 hover:duration-500 hover:bg-[rgb(30,30,50)] delay-200">
                         <Image
                             className="w-[100%] h-[100%] object-cover rounded-2xl"
                             src={webImg}
@@ -44,7 +44,7 @@ export default function Desc(){
                         <p className="text-sm">Weave your digital aspirations into reality through our dynamic Web solutions, fusing creativity with functionality.</p>
                     </div>
 
-                    <div className="flex flex-col justify-center align-middle resize bg-[rgb(20,20,50)] p-5 rounded-xl m-5 h-[40vh] hover:duration-500 hover:bg-[rgb(30,30,50)] delay-200">
+                    <div className="flex flex-col justify-center align-middle resize bg-[rgb(20,20,50)] p-5 rounded-xl m-5 hover:duration-500 hover:bg-[rgb(30,30,50)] delay-200">
                         <Image
                             className="w-[100%] h-[100%] object-cover rounded-2xl"
                             src={metaImg}
@@ -55,7 +55,7 @@ export default function Desc(){
                         <p className="text-sm">Enter a realm where AI drives immersive Metaverse encounters, pushing boundaries of what's possible.</p>
                     </div>
 
-                    <div className="flex flex-col justify-center align-middle resize bg-[rgb(20,20,50)] p-5 rounded-xl m-5 h-[40vh] hover:duration-500 hover:bg-[rgb(30,30,50)] delay-200">
+                    <div className="flex flex-col justify-center align-middle resize bg-[rgb(20,20,50)] p-5 rounded-xl m-5 hover:duration-500 hover:bg-[rgb(30,30,50)] delay-200">
                         <Image
                             className="w-[100%] h-[100%] object-cover rounded-2xl"
                             src={blockchainImg}
