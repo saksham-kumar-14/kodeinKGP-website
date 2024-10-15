@@ -9,7 +9,7 @@ import KodeinLogo from "../public/Images/kodein_logo.png"
 export default function Nav(){
 
     const router = useRouter();
-    const [listClassName, setListClassName] = useState("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4");
+    const [listClassName, setListClassName] = useState("md:hidden sm:hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4");
     const allClassNames = [
         "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
         "md:hidden sm:hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
