@@ -31,7 +31,7 @@ export default function Body(){
                 }
                 onClick={()=>{
                     setGame('findOne')
-                }}>FindBall</button>
+                }}>FindOne</button>
             </div>
 
             {game == "sudoku" && <Sudoku />}
