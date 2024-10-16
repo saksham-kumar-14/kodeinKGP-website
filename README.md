@@ -1,6 +1,7 @@
 # KodeinKGP website
 
-## Tech Used:
+## Tech Stack:
 - Next js
 - Tailwind css
-- LocalStorage
+
+Hosted on [here!](https://saksham-kumar-14.github.io/kodeinKGP-website)
