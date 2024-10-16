@@ -26,7 +26,7 @@ export default function Body(){
         
             {allArticles.length>0 && 
 
-            <div className="flex flex-col lg:flex-row h-[75vh] align-middle">
+            <div className="flex flex-col lg:flex-row h-[100vh] lg:h-[75vh] align-middle">
 
                 <div className="lg:w-[30%] flex flex-col items-center justify-center ">
                     <a href={allArticles[0].link} target="_blank" className="lg:h-[100%] flex flex-col bg-[rgb(20,20,50)] cursor-pointer border-2 border-[rgb(20,20,50)] rounded-3xl  hover:border-[#5be6ff] m-5 align-middle p-2">
@@ -37,13 +37,13 @@ export default function Body(){
                             height={250}
                         />
                         <span
-                        className="m-5 font-semibold text-xl bg-gradient-to-r from-[#5be6ff] to-[#fff] text-transparent bg-clip-text"
+                        className="m-1 md:m-3 lg:m-5 font-semibold text-xl bg-gradient-to-r from-[#5be6ff] to-[#fff] text-transparent bg-clip-text"
                         >{allArticles[0].date}</span>
-                        <span className="m-5 text-3xl">{allArticles[0].title}</span>
+                        <span className="m-1 md:m-3 lg:m-5 text-xl md:text-2xl lg:text-3xl">{allArticles[0].title}</span>
                     </a>
                 </div>
                 
-                <div className="lg:w-[70%] overflow-y-scroll lg:border-none border-2 border-[#5be6ff] p-4 rounded-2xl">
+                <div className="lg:w-[70%] max-h-screen overflow-y-scroll lg:border-none border-2 border-[#5be6ff] p-4 rounded-2xl">
                     {allArticles.map((e, idx)=>{
                         if(idx!=0){
                             return(
